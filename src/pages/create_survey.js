@@ -1,7 +1,7 @@
 export default function Create_survey() {
-    return (
-        <div>
-            <h1>CREATE SURVEY PAGE</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Create_survey PAGE</h1>
+    </div>
+  );
 }

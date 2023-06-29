@@ -1,6 +1,22 @@
+//import { useState } from "react";
+
 export default function Survey() {
+
+// const [inputs, setInputs] = useState([])
+//   const handleChange = (event) => {
+//     const name = event.target.name;
+//     const value = event.target.value;
+//     setInputs(values => { {values,[name]: value}});
+// }
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     console.log(inputs);
+// };
+
+
   return (
-    <form>
+    
+    <form >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
@@ -25,6 +41,7 @@ export default function Survey() {
                   placeholder="  First Name"
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  
                 />
               </div>
             </div>
