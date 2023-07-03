@@ -7,8 +7,7 @@ const navigation = [
   { name: "Home", href: "/home" },
   { name: "New Survey", href: "/createsurvey" },
   { name: "Previous Surveys", href: "/previoussurvey" },
-  {
-    name: "Data Visualization", href: "/visualization" },
+  { name: "Data Visualization", href: "/visualization" },
 ];
 
 export default function Home() {

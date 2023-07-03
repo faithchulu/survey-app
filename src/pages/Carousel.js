@@ -8,7 +8,7 @@ import image3 from "../assets/images/image3.jpg";
 
 const ImageSlider = () => {
   return (
-    <div className="max-w-2xl mx-auto bg-gray-100 min-h-screen p-8">
+    <div className="container max-auto bg-gray-100  max-w-5xl max-h-full">
       <Carousel
         showThumbs={false}
         autoPlay={true}
@@ -18,7 +18,15 @@ const ImageSlider = () => {
       >
         <div>
           <img src={image1} alt="Slider Image 1" />
-          <p className="legend">Image 1</p>
+          <p className="legend">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
         <div>
           <img src={image2} alt="Slider Image 2" />
