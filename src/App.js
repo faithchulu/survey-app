@@ -3,8 +3,9 @@ import Login from './pages/login'
 import Home from './pages/Home'
 import Survey from './pages/Survey'
 import Visualization from "./pages/visualization";
-import Create_survey from "./pages/create_survey";
-import Previous_survey from "./pages/previous_survey";
+import CreateSurvey from "./pages/create_survey";
+import PreviousSurvey from "./pages/previous_survey";
+import FormWizard from "./pages/FormWizard";
 
 import "./App.css";
 
@@ -17,9 +18,10 @@ function App() {
           <Route path="/logout" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/survey" element={<Survey />} />
+          <Route path="/form" element={<FormWizard />} />
           <Route path="/visualization" element={<Visualization />} />
-          <Route path="/createsurvey" element={<Create_survey />} />
-          <Route path="/previoussurvey" element={<Previous_survey />} />
+          <Route path="/createsurvey" element={<CreateSurvey />} />
+          <Route path="/previoussurvey" element={<PreviousSurvey />} />
         </Routes>
       </BrowserRouter>
     </div>
