@@ -1,63 +1,36 @@
 
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import image1 from '../assets/images/image1.jpg'
+import image2 from "../assets/images/image2.jpg";
+import image3 from "../assets/images/image3.jpg";
 
-const Carousel = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+const ImageSlider = () => {
   return (
-    <div className="w-full px-4">
-      <h2 className="text-2xl font-bold mb-4">Carousel Example</h2>
-      <Slider {...settings}>
-        <div className="px-4">
-          <img
-            className="w-full rounded-lg"
-            src="https://via.placeholder.com/400"
-            alt="Carousel Item 1"
-          />
+    <div className="max-w-2xl mx-auto bg-gray-100 min-h-screen p-8">
+      <Carousel
+        showThumbs={false}
+        autoPlay={true}
+        infiniteLoop={true}
+        interval={3000}
+        showStatus={false}
+      >
+        <div>
+          <img src={image1} alt="Slider Image 1" />
+          <p className="legend">Image 1</p>
         </div>
-        <div className="px-4">
-          <img
-            className="w-full rounded-lg"
-            src="https://via.placeholder.com/400"
-            alt="Carousel Item 2"
-          />
+        <div>
+          <img src={image2} alt="Slider Image 2" />
+          <p className="legend">Image 2</p>
         </div>
-        <div className="px-4">
-          <img
-            className="w-full rounded-lg"
-            src="https://via.placeholder.com/400"
-            alt="Carousel Item 3"
-          />
+        <div>
+          <img src={image3} alt="Slider Image 3" />
+          <p className="legend">Image 3</p>
         </div>
-        {/* Add more slides as needed */}
-      </Slider>
+      </Carousel>
     </div>
   );
 };
 
-export default Carousel;
+export default ImageSlider;
