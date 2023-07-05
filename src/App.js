@@ -7,6 +7,7 @@ import CreateSurvey from "./pages/create_survey";
 import PreviousSurvey from "./pages/previous_survey";
 import FormWizard from "./pages/FormWizard";
 import Carousel from "./pages/Carousel";
+import Dashboard from "./pages/dashboard";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route index element={<Login />} />
           <Route path="/logout" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<Survey />} />
           <Route path="/form" element={<FormWizard />} />
           <Route path="/carousel" element={<Carousel />} />
