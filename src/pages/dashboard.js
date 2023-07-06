@@ -30,14 +30,10 @@ const navigation = [
   { name: "View Past Surveys", href: "/previoussurvey", icon: CalendarIcon, current: false },
   { name: "Reports", href: "/visualization", icon: ChartPieIcon, current: false },
 ];
-const teams = [
-  { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
-  { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-  { id: 3, name: "Workcation", href: "#", initial: "W", current: false },
-];
+
 const userNavigation = [
   { name: "Your profile", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Sign out", href: "/logout" },
 ];
 
 function classNames(...classes) {
@@ -50,14 +46,7 @@ export default function Dashboard() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
 
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -390,7 +379,7 @@ export default function Dashboard() {
           type="button"
           className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
-          <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+          <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" href="/createsurvey" />
           New Survey
         </button>
       </div>
