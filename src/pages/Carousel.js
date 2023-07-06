@@ -8,33 +8,35 @@ import image3 from "../assets/images/image3.jpg";
 
 const ImageSlider = () => {
   return (
-    <div className="container max-auto bg-gray-100  max-w-5xl max-h-full">
+    <div className="h-screen">
       <Carousel
         showThumbs={false}
         autoPlay={true}
         infiniteLoop={true}
         interval={3000}
         showStatus={false}
+        className="h-full"
       >
         <div>
-          <img src={image1} alt="Slider Image 1" />
-          <p className="legend">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <img
+            src={image3}
+            alt="Slider Image 1"
+            className="object-cover h-screen w-full"
+          />
         </div>
         <div>
-          <img src={image2} alt="Slider Image 2" />
-          <p className="legend">Image 2</p>
+          <img
+            src={image3}
+            alt="Slider Image 2"
+            className="object-cover h-screen w-full"
+          />
         </div>
         <div>
-          <img src={image3} alt="Slider Image 3" />
-          <p className="legend">Image 3</p>
+          <img
+            src={image3}
+            alt="Slider Image 3"
+            className="object-cover h-screen w-full"
+          />
         </div>
       </Carousel>
     </div>
