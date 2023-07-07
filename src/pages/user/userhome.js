@@ -5,8 +5,12 @@ export default function UserHome() {
   return (
     <div>
       {" "}
-          <NavBar />
-          <UserCarousel />
+      <div>
+        <NavBar />
+      </div>
+      <div>
+        <UserCarousel />
+      </div>
     </div>
   );
 }
