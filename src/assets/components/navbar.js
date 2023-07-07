@@ -7,22 +7,22 @@ const NavBar = () => {
         <div className="text-white font-bold text-lg">Logo</div>
         <ul className="flex space-x-4">
           <li>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="/userhome" className="text-white hover:text-gray-300">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:text-gray-300">
-              About
+            <a href="/form" className="text-white hover:text-gray-300">
+              Survey
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:text-gray-300">
-              Services
+            <a href="/latest" className="text-white hover:text-gray-300">
+              Latest
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="About" className="text-white hover:text-gray-300">
               Contact
             </a>
           </li>

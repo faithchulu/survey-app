@@ -1,8 +1,10 @@
 import { PlusIcon } from "@heroicons/react/20/solid";
+import NavBar from "../assets/components/navbar";
 
 export default function Create_survey() {
   return (
     <div>
+      <NavBar />
       
       <div className="text-center">
         <svg

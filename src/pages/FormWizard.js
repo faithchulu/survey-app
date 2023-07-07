@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavBar from "../assets/components/navbar";
 
 const FormWizard = () => {
   const [step, setStep] = useState(1);
@@ -29,7 +30,6 @@ const FormWizard = () => {
   const renderStep1 = () => (
     <div className="space-y-4">
       <h2 className="text-xl font-semibold">
-        {" "}
         How frequently do you visit our supermarket?
       </h2>
       <div>
@@ -1129,20 +1129,23 @@ const renderStep13 = () => (
 
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      {step === 1 && renderStep1()}
-      {step === 2 && renderStep2()}
-      {step === 3 && renderStep3()}
-      {step === 4 && renderStep4()}
-      {step === 5 && renderStep5()}
-      {step === 6 && renderStep6()}
-      {step === 7 && renderStep7()}
-      {step === 8 && renderStep8()}
-      {step === 9 && renderStep9()}
-      {step === 10 && renderStep10()}
-      {step === 11 && renderStep11()}
-      {step === 12 && renderStep12()}
-      {step === 13 && renderStep13()}
+    <div>
+      <NavBar />
+      <div className="max-w-md mx-auto p-4">
+        {step === 1 && renderStep1()}
+        {step === 2 && renderStep2()}
+        {step === 3 && renderStep3()}
+        {step === 4 && renderStep4()}
+        {step === 5 && renderStep5()}
+        {step === 6 && renderStep6()}
+        {step === 7 && renderStep7()}
+        {step === 8 && renderStep8()}
+        {step === 9 && renderStep9()}
+        {step === 10 && renderStep10()}
+        {step === 11 && renderStep11()}
+        {step === 12 && renderStep12()}
+        {step === 13 && renderStep13()}
+      </div>
     </div>
   );
 };

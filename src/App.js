@@ -8,17 +8,17 @@ import PreviousSurvey from "./pages/previous_survey";
 import FormWizard from "./pages/FormWizard";
 import UserHome from "./pages/userHome";
 import Dashboard from "./pages/dashboard";
+import About from "./pages/about";
 
 function App() {
   return (
     <div>
-     
-
       <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
           <Route path="/logout" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<Survey />} />
