@@ -511,27 +511,86 @@ const renderStep5 = () => (
 
 const renderStep6 = () => (
   <div className="space-y-4">
-    <h2 className="text-xl font-semibold">Step 3: Account Information</h2>
-    <div>
-      <label className="block text-gray-700">Password:</label>
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        className="border border-gray-300 p-2 rounded-md w-full"
-      />
-    </div>
-    <div>
-      <label className="block text-gray-700">Confirm Password:</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-        className="border border-gray-300 p-2 rounded-md w-full"
-      />
-    </div>
+    <h2 className="text-xl font-semibold">
+      How satisfied are you with the availability of fresh produce in our
+      supermarket?
+    </h2>
+    <fieldset className="mt-6">
+      
+      <div className="mt-6 space-y-6">
+        <div className="flex items-center gap-x-3">
+          <input
+            id="very-satisfied"
+            name="satisifaction"
+            type="radio"
+            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label
+            htmlFor="very-satisfied"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Very satisfied
+          </label>
+        </div>
+        <div className="flex items-center gap-x-3">
+          <input
+            id="satisfied"
+            name="satisifaction"
+            type="radio"
+            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label
+            htmlFor="satisfied"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            satisfied
+          </label>
+        </div>
+        <div className="flex items-center gap-x-3">
+          <input
+            id="neither"
+            name="satisifaction"
+            type="radio"
+            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label
+            htmlFor="neither"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Neither satisfied or Dissatisfied
+          </label>
+        </div>
+        <div className="flex items-center gap-x-3">
+          <input
+            id="dissatisfied"
+            name="satisifaction"
+            type="radio"
+            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label
+            htmlFor="dissatisfied"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Dissatisfied
+          </label>
+        </div>
+        <div className="flex items-center gap-x-3">
+          <input
+            id="very-dissatisfied"
+            name="satisifaction"
+            type="radio"
+            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label
+            htmlFor="very-dissatisfied"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Very Dissatisfied
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
     <div className="flex space-x-4">
       <button
         onClick={handlePrevious}
@@ -548,31 +607,509 @@ const renderStep6 = () => (
     </div>
   </div>
 );
+  
+  const renderStep7 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+        Do you find our supermarket's pricing to be competitive compared to
+        other supermarkets in the area?
+      </h2>
+      <fieldset className="mt-6">
+
+        <div className="mt-6 space-y-6">
+          <div className="flex items-center gap-x-3">
+            <input
+              id="yes"
+              name="yes"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="yes"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Yes
+            </label>
+          </div>
+          <div className="flex items-center gap-x-3">
+            <input
+              id="no"
+              name="no"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="no"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
 
   
-const renderStepN = () => (
+  const renderStep8 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+        How likely are you to recommend our supermarket to a friend or family
+        member?
+      </h2>
+      <fieldset className="mt-6">
+
+        <div className="mt-6 space-y-6">
+          <div className="flex items-center gap-x-3">
+            <input
+              id="likely"
+              name="likely"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="likely"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Likely
+            </label>
+          </div>
+          <div className="flex items-center gap-x-3">
+            <input
+              id="not-likely"
+              name="not-likely"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="not-likely"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Not Likely
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+  const renderStep9 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+             What is your preferred payment method when shopping at our supermarket?
+      </h2>
+      <fieldset className="mt-6">
+      
+        <div className="mt-6 space-y-6">
+          <div className="flex items-center gap-x-3">
+            <input
+              id="cash"
+              name="cash"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="cash"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Cash
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="cards"
+              name="cards"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="cards"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Credit/Debit cards
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="mobile"
+              name="mobile"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="mobile"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Mobile payment apps
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+
+  const renderStep10 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+        Are there any improvements or changes you would suggest for our
+        supermarket?
+      </h2>
+      
+      <div class="mt-2">
+        <textarea
+          id="improvements"
+          name="improvements"
+          rows="3"
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        ></textarea>
+      </div>
+
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+  
+  const renderStep11 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+        
+        Would you be interested in participating in a customer loyalty program
+        if one were offered?
+      </h2>
+      <fieldset className="mt-6">
+        <div className="mt-6 space-y-6">
+          <div className="flex items-center gap-x-3">
+            <input
+              id="yes"
+              name="yes"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="yes"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Yes
+            </label>
+          </div>
+          <div className="flex items-center gap-x-3">
+            <input
+              id="no"
+              name="no"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="no"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+
+  const renderStep12 = () => (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">
+        How would you rate the customer service provided by our supermarket
+        staff?
+      </h2>
+      <fieldset className="mt-6">
+        <div className="mt-6 space-y-6">
+          <div className="flex items-center gap-x-3">
+            <input
+              id="excellent"
+              name="excellent"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="excellent"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Excellent
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="good"
+              name="good"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="good"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Good
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="okay"
+              name="okay"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="okay"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Okay
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="bad"
+              name="bad"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="bad"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Bad
+            </label>
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <input
+              id="poor"
+              name="poor"
+              type="radio"
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+            <label
+              htmlFor="poor"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Poor
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div className="flex space-x-4">
+        <button
+          onClick={handlePrevious}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+
+
+const renderStep13 = () => (
   <div className="space-y-4">
-    <h2 className="text-xl font-semibold">Step 4: Account Information</h2>
-    <div>
-      <label className="block text-gray-700">Password:</label>
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        className="border border-gray-300 p-2 rounded-md w-full"
-      />
+    <h2 className="text-xl font-semibold">Last step: Personal Information</h2>
+    <div className="sm:col-span-3">
+      <label
+        htmlFor="first-name"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        First name
+      </label>
+      <div className="mt-2">
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="  First Name"
+          autoComplete="given-name"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
     </div>
-    <div>
-      <label className="block text-gray-700">Confirm Password:</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-        className="border border-gray-300 p-2 rounded-md w-full"
-      />
+
+    <div className="sm:col-span-3">
+      <label
+        htmlFor="last-name"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        Last name
+      </label>
+      <div className="mt-2">
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="  Last Name"
+          autoComplete="family-name"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
     </div>
+
+    <div className="sm:col-span-5">
+      <label
+        htmlFor="email"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        Email address
+      </label>
+      <div className="mt-2">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          placeholder="  Email Address"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+    </div>
+
+    <div className="sm:col-span-2">
+      <label
+        htmlFor="age"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        Age
+      </label>
+      <div className="mt-2">
+        <input
+          type="text"
+          name="age"
+          id="age"
+          autoComplete="age"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+    </div>
+
+    <div className="sm:col-span-2">
+      <label
+        htmlFor="gender"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        Gender
+      </label>
+      <div className="mt-2">
+        <select
+          id="gender"
+          name="gender"
+          autoComplete="gender"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+        >
+          <option>Male</option>
+          <option>Female</option>
+          <option>I don't wish to say</option>
+        </select>
+      </div>
+    </div>
+
+    <div className="sm:col-span-2">
+      <label
+        htmlFor="country"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        Branch
+      </label>
+      <div className="mt-2">
+        <select
+          id="branch"
+          name="branch"
+          autoComplete="branch-name"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+        >
+          <option>Cairo</option>
+          <option>Pinacle</option>
+          <option>Lewanika</option>
+          <option>Kalingalinga</option>
+          <option>Manda Hill</option>
+        </select>
+      </div>
+    </div>
+
     <div className="flex space-x-4">
       <button
         onClick={handlePrevious}
@@ -598,7 +1135,14 @@ const renderStepN = () => (
       {step === 3 && renderStep3()}
       {step === 4 && renderStep4()}
       {step === 5 && renderStep5()}
-      {step === 10 && renderStepN()}
+      {step === 6 && renderStep6()}
+      {step === 7 && renderStep7()}
+      {step === 8 && renderStep8()}
+      {step === 9 && renderStep9()}
+      {step === 10 && renderStep10()}
+      {step === 11 && renderStep11()}
+      {step === 12 && renderStep12()}
+      {step === 13 && renderStep13()}
     </div>
   );
 };
