@@ -1,5 +1,5 @@
 import { PlusIcon } from "@heroicons/react/20/solid";
-import NavBar from "../assets/components/navbar";
+import NavBar from "../../assets/components/navbar";
 
 export default function Create_survey() {
   return (

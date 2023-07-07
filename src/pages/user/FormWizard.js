@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "../assets/components/navbar";
+import NavBar from "../../assets/components/navbar";
 
 const FormWizard = () => {
   const [step, setStep] = useState(1);

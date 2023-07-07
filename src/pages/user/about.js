@@ -1,4 +1,4 @@
-import NavBar from "../assets/components/navbar";
+import NavBar from "../../assets/components/navbar";
 
 export default function About () { 
     return (

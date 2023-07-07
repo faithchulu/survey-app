@@ -2,22 +2,11 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import image1 from '../assets/images/image1.jpg'
-// import image2 from "../assets/images/image2.jpg";
-// import image3 from "../assets/images/image3.jpg";
 
-import NavBar from "../assets/components/navbar";
-
-const UserHome = () => {
+const UserCarousel = () => {
   return (
     <div>
-      <div>
-        <NavBar />
-      </div>
-
       <div className="h-screen">
-        <p>some text</p>
-
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -40,13 +29,13 @@ const UserHome = () => {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
-                    href="#"
+                    href="/form"
                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Get started
                   </a>
                   <a
-                    href="#"
+                    href="/latest"
                     className="text-sm font-semibold leading-6 text-gray-900"
                   >
                     Learn more <span aria-hidden="true">→</span>
@@ -109,4 +98,4 @@ const UserHome = () => {
   );
 };
 
-export default UserHome;
+export default UserCarousel;
