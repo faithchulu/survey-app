@@ -6,12 +6,14 @@ import Visualization from "./pages/visualization";
 import CreateSurvey from "./pages/create_survey";
 import PreviousSurvey from "./pages/previous_survey";
 import FormWizard from "./pages/FormWizard";
-import Carousel from "./pages/Carousel";
+import UserHome from "./pages/userHome";
 import Dashboard from "./pages/dashboard";
 
 function App() {
   return (
     <div>
+     
+
       <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
@@ -21,7 +23,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<Survey />} />
           <Route path="/form" element={<FormWizard />} />
-          <Route path="/carousel" element={<Carousel />} />
+          <Route path="/userhome" element={<UserHome />} />
           <Route path="/visualization" element={<Visualization />} />
           <Route path="/createsurvey" element={<CreateSurvey />} />
           <Route path="/previoussurvey" element={<PreviousSurvey />} />
