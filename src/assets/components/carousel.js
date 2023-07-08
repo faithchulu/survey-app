@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const UserCarousel = () => {
   return (
     <div>
-      <div className="h-screen">
+      <div className="h-80">
         <Carousel
           showThumbs={false}
           autoPlay={true}
