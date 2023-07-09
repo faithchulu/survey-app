@@ -1131,7 +1131,7 @@ const renderStep13 = () => (
   return (
     <div>
       <NavBar />
-      <div className="max-w-md mx-auto p-4">
+      <div className="bg-gray-200 mt-6 max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
         {step === 3 && renderStep3()}
