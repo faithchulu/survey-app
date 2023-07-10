@@ -93,7 +93,7 @@ export default function Footer() {
               alt="Company name"
             />
             <p className="text-sm leading-6 text-gray-300">
-              Making the world a better place through constructing elegant hierarchies.
+              Making the world a better place through quality goods and services.
             </p>
             
           </div>
@@ -151,9 +151,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
+     </div>
         <div className="mt-6 border-t border-white/10 pt-6 sm:mt-6 lg:mt-6">
-          <p className="text-xs leading-5 text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+          <p className="text-xs leading-5 text-gray-400">&copy; 2023 Supermarketname, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
