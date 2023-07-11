@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../../assets/components/navbar";
+import Footer from "../../assets/components/footer";
 
 const FormWizard = () => {
   const [step, setStep] = useState(1);
@@ -484,13 +485,13 @@ const renderStep5 = () => (
       our supermarket?
     </h2>
     <div>
-    <input
-        type="text"
-        name="confirmPassword"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-        className="border border-gray-300 p-2 rounded-md w-full"
-      />
+      <textarea
+        id="specific-products"
+        name="specific-products"
+        rows="6"
+        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+      ></textarea>
+     
     </div>
     <div className="flex space-x-4">
       <button
@@ -1130,7 +1131,9 @@ const renderStep13 = () => (
 
   return (
     <div>
-      <NavBar />
+      <div className="sticky top-0" >
+        <NavBar />
+      </div>{" "}
       <div className="bg-gray-200 mt-6 max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
@@ -1145,6 +1148,10 @@ const renderStep13 = () => (
         {step === 11 && renderStep11()}
         {step === 12 && renderStep12()}
         {step === 13 && renderStep13()}
+      </div>
+      <div className="bottom-0">
+        {" "}
+        <Footer />
       </div>
     </div>
   );
