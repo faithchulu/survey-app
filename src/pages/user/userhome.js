@@ -9,10 +9,10 @@ export default function UserHome() {
       <div>
         <NavBar />
       </div>
-      <div>
+      <div className="relative">
         <UserCarousel />
       </div>
-      <div>
+      <div className=" mt-64 relative bottom-0">
         <Footer />
       </div>
     </div>

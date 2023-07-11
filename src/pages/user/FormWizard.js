@@ -29,18 +29,18 @@ const FormWizard = () => {
   };
 
   const renderStep1 = () => (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold">
+    <div className="space-y-4 text-white">
+      <h2 className="text-xl font-semibold text-white">
         How frequently do you visit our supermarket?
       </h2>
       <div>
-        <fieldset className="mt-6">
-          <legend className="text-sm font-semibold leading-6 text-gray-900">
+        <fieldset className="mt-6 text-white">
+          <legend className="text-sm font-semibold leading-6 ">
             How frequently do you visit our supermarket?
           </legend>
 
-          <div className="mt-6 space-y-6">
-            <div className="flex items-center gap-x-3">
+          <div className="mt-6 space-y-6 text-white">
+            <div className="flex text-white items-center text-white gap-x-3">
               <input
                 id="never"
                 name="never"
@@ -49,7 +49,7 @@ const FormWizard = () => {
               />
               <label
                 htmlFor="never"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 Never
               </label>
@@ -990,7 +990,7 @@ const renderStep6 = () => (
 
 
 const renderStep13 = () => (
-  <div className="space-y-4">
+  <div className="space-y-4 text-white">
     <h2 className="text-xl font-semibold">Last step: Personal Information</h2>
     <div className="sm:col-span-3">
       <label
@@ -1130,11 +1130,11 @@ const renderStep13 = () => (
 
 
   return (
-    <div>
-      <div className="sticky top-0" >
+    <div className="bg-no-repeat bg-cover bg-[url(https://images.unsplash.com/photo-1589362281138-e3f7ebe47f1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxhcHRvcCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60)]">
+      <div className="sticky top-0">
         <NavBar />
       </div>{" "}
-      <div className="bg-gray-200 mt-6 max-w-md mx-auto p-4">
+      <div className="bg-black/50 text-white mt-6  max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
         {step === 3 && renderStep3()}
@@ -1149,7 +1149,7 @@ const renderStep13 = () => (
         {step === 12 && renderStep12()}
         {step === 13 && renderStep13()}
       </div>
-      <div className="bottom-0">
+      <div className="sticky">
         {" "}
         <Footer />
       </div>

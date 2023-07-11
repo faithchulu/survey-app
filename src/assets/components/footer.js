@@ -1,7 +1,7 @@
 const navigation = {
   solutions: [
-    { name: "Landing Page", href: "/home" },
-    { name: "Introduction", href: "/home" },
+    { name: "Landing Page", href: "/userhome" },
+    { name: "Introduction", href: "/userhome" },
   ],
   support: [
     { name: "Answer Survey", href: "/form" },

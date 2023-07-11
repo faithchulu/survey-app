@@ -18,12 +18,12 @@ const NavBar = () => {
           </li>
           <li>
             <a href="/latest" className="text-white hover:text-gray-300">
-              Latest
+              Blog
             </a>
           </li>
           <li>
             <a href="About" className="text-white hover:text-gray-300">
-              Contact
+              About Us
             </a>
           </li>
         </ul>
