@@ -40,6 +40,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -158,7 +160,7 @@ export default function Dashboard() {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4">
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-black px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <img
                 className="h-8 w-auto"
@@ -211,7 +213,7 @@ export default function Dashboard() {
         </div>
 
         <div className="lg:pl-72">
-          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-black px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
             <button
               type="button"
               className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
@@ -228,22 +230,6 @@ export default function Dashboard() {
             />
 
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
-              <form className="relative flex flex-1" action="#" method="GET">
-                <label htmlFor="search-field" className="sr-only">
-                  Search
-                </label>
-                <MagnifyingGlassIcon
-                  className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-                <input
-                  id="search-field"
-                  className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
-                  placeholder="Search..."
-                  type="search"
-                  name="search"
-                />
-              </form>
               <div className="flex items-center gap-x-4 lg:gap-x-6">
                 <button
                   type="button"
@@ -327,7 +313,7 @@ export default function Dashboard() {
             }}
           />
         </div>
-        {/* <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -353,7 +339,7 @@ export default function Dashboard() {
               </a>
             </div>
           </div>
-        </div> */}
+        </div>
               <div className="px-4 sm:px-6 lg:px-8"><h1>{/*Some stuff here*/}</h1></div>
             </div>
             <div className="text-center">
@@ -370,7 +356,7 @@ export default function Dashboard() {
           strokeLinejoin="round"
           strokeWidth={2}
           d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
-        />
+        />x
       </svg>
       <h3 className="mt-2 text-sm font-semibold text-gray-900">No Surveys</h3>
       <p className="mt-1 text-sm text-gray-500">Get started by creating a new survey.</p>
@@ -382,8 +368,13 @@ export default function Dashboard() {
           <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" href="/createsurvey" />
           New Survey
         </button>
-      </div>
-    </div>
+
+                
+                
+              </div>
+
+            </div>
+
           </main>
         </div>
       </div>
