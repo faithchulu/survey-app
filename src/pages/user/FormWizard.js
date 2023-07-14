@@ -64,7 +64,7 @@ const FormWizard = () => {
               />
               <label
                 htmlFor="rarely"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-white"
               >
                 Rarely
               </label>
@@ -79,7 +79,7 @@ const FormWizard = () => {
               />
               <label
                 htmlFor="sometimes"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium  leading-6 text-white"
               >
                 Sometimes
               </label>
@@ -94,7 +94,7 @@ const FormWizard = () => {
               />
               <label
                 htmlFor="often"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-white"
               >
                 Often
               </label>
@@ -109,7 +109,7 @@ const FormWizard = () => {
               />
               <label
                 htmlFor="always"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-white"
               >
                 Always
               </label>
@@ -145,7 +145,7 @@ const FormWizard = () => {
             />
             <label
               htmlFor="very-satisfied"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Very satisfied
             </label>
@@ -159,7 +159,7 @@ const FormWizard = () => {
             />
             <label
               htmlFor="satisfied"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               satisfied
             </label>
@@ -173,7 +173,7 @@ const FormWizard = () => {
             />
             <label
               htmlFor="neither"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Neither satisfied or Dissatisfied
             </label>
@@ -187,7 +187,7 @@ const FormWizard = () => {
             />
             <label
               htmlFor="dissatisfied"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Dissatisfied
             </label>
@@ -201,7 +201,7 @@ const FormWizard = () => {
             />
             <label
               htmlFor="very-dissatisfied"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Very Dissatisfied
             </label>
@@ -249,7 +249,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="convenient-location"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Convenient Location
               </label>
@@ -268,7 +268,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="competitive-prices"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Competitive Prices
               </label>
@@ -287,7 +287,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="wide-selection-of-products"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Wide selection of products
               </label>
@@ -306,7 +306,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="quality-of-products"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Quality of products
               </label>
@@ -325,7 +325,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="friendly-and-helpful-staff"
-                className="font-medium text-gray-900"
+                className="font-medium white"
               >
                 Friendly and helpful staff
               </label>
@@ -344,7 +344,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="clean-and-well-maintained-store"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Clean and well maintained store
               </label>
@@ -363,7 +363,7 @@ const FormWizard = () => {
             <div className="text-sm leading-6">
               <label
                 htmlFor="promotional-offers-and-discounts"
-                className="font-medium text-gray-900"
+                className="font-medium text-white"
               >
                 Promotional offers and discounts
               </label>
@@ -407,7 +407,7 @@ const renderStep4 = () => (
           />
           <label
             htmlFor="very-clean"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Very clean
           </label>
@@ -422,7 +422,7 @@ const renderStep4 = () => (
           />
           <label
             htmlFor="clean"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Clean
           </label>
@@ -437,7 +437,7 @@ const renderStep4 = () => (
           />
           <label
             htmlFor="dirty"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Dirty
           </label>
@@ -452,7 +452,7 @@ const renderStep4 = () => (
           />
           <label
             htmlFor="very-dirty"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Very Dirty
           </label>
@@ -528,7 +528,7 @@ const renderStep6 = () => (
           />
           <label
             htmlFor="very-satisfied"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Very satisfied
           </label>
@@ -542,7 +542,7 @@ const renderStep6 = () => (
           />
           <label
             htmlFor="satisfied"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             satisfied
           </label>
@@ -556,7 +556,7 @@ const renderStep6 = () => (
           />
           <label
             htmlFor="neither"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Neither satisfied or Dissatisfied
           </label>
@@ -570,7 +570,7 @@ const renderStep6 = () => (
           />
           <label
             htmlFor="dissatisfied"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Dissatisfied
           </label>
@@ -584,7 +584,7 @@ const renderStep6 = () => (
           />
           <label
             htmlFor="very-dissatisfied"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-white"
           >
             Very Dissatisfied
           </label>
@@ -627,7 +627,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="yes"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Yes
             </label>
@@ -641,7 +641,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="no"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               No
             </label>
@@ -684,7 +684,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="likely"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Likely
             </label>
@@ -698,7 +698,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="not-likely"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Not Likely
             </label>
@@ -739,7 +739,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="cash"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Cash
             </label>
@@ -754,7 +754,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="cards"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-whie"
             >
               Credit/Debit cards
             </label>
@@ -769,7 +769,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="mobile"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Mobile payment apps
             </label>
@@ -847,7 +847,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="yes"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Yes
             </label>
@@ -861,7 +861,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="no"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               No
             </label>
@@ -903,7 +903,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="excellent"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Excellent
             </label>
@@ -918,7 +918,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="good"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Good
             </label>
@@ -933,7 +933,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="okay"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-create"
             >
               Okay
             </label>
@@ -948,7 +948,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="bad"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-white"
             >
               Bad
             </label>
@@ -963,7 +963,7 @@ const renderStep6 = () => (
             />
             <label
               htmlFor="poor"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-)"
             >
               Poor
             </label>
@@ -995,7 +995,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-3">
       <label
         htmlFor="first-name"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         First name
       </label>
@@ -1014,7 +1014,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-3">
       <label
         htmlFor="last-name"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         Last name
       </label>
@@ -1033,7 +1033,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-5">
       <label
         htmlFor="email"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         Email address
       </label>
@@ -1052,7 +1052,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-2">
       <label
         htmlFor="age"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         Age
       </label>
@@ -1070,7 +1070,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-2">
       <label
         htmlFor="gender"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         Gender
       </label>
@@ -1091,7 +1091,7 @@ const renderStep13 = () => (
     <div className="sm:col-span-2">
       <label
         htmlFor="country"
-        className="block text-sm font-medium leading-6 text-gray-900"
+        className="block text-sm font-medium leading-6 text-white"
       >
         Branch
       </label>
