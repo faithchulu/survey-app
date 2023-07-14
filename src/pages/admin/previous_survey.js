@@ -21,7 +21,7 @@ const statuses = {
   Withdraw: "text-gray-600 bg-gray-50 ring-gray-500/10",
   Overdue: "text-red-700 bg-red-50 ring-red-600/10",
 };
-const clients = [
+const surveys = [
   {
     id: 1,
     name: "Survey1",
@@ -406,7 +406,7 @@ export default function Dashboard() {
                   role="list"
                   className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
                 >
-                  {clients.map((client) => (
+                  {surveys.map((client) => (
                     <li
                       key={client.id}
                       className="overflow-hidden rounded-xl border border-gray-200"
@@ -477,7 +477,7 @@ export default function Dashboard() {
                       </div>
                       <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
                         <div className="flex justify-between gap-x-4 py-3">
-                          <dt className="text-gray-500">Last invoice</dt>
+                          <dt className="text-gray-500">Created: </dt>
                           <dd className="text-gray-700">
                             <time dateTime={client.dateCreated.dateTime}>
                               {client.dateCreated.date}
@@ -509,7 +509,7 @@ export default function Dashboard() {
                 <h1>{/*Some stuff here*/}</h1>
               </div>
             </div>
-            
+
             {/* <PieChart /> */}
             <div className="text-center">
               <svg
