@@ -329,13 +329,10 @@ export default function Dashboard() {
 
           <main className="py-10 bg-slate-100 min-h-screen">
             <div className="relative isolate  pt-4 ">
-              <div className="mx-auto max-w-2xl ">
-                <div>
-                  <h3 className=" font-bold tracking-tight text-gray-900 sm:text-3xl">
+                
+                  <h3 className=" font-bold m-6 tracking-tight text-gray-900 sm:text-3xl">
                     Sumary for the last 30 days
                   </h3>
-                </div>
-              </div>
 
               {/* Statistics card group */}
               <div>
