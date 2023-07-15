@@ -1,7 +1,7 @@
 const stats = [
-  { name: 'Total Subscribers', stat: '71,897' },
-  { name: 'Avg. Open Rate', stat: '58.16%' },
-  { name: 'Avg. Click Rate', stat: '24.57%' },
+  { name: 'Total Responses', stat: '1,897' },
+  { name: 'Avg. Response Rate', stat: '58.16%' },
+  { name: 'Avg. Respondent Age', stat: '26.5' },
 ]
 
 export default function Statscards() {

@@ -1,3 +1,4 @@
+import { PlusIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 
 const FormCreator = () => {
@@ -36,22 +37,23 @@ const FormCreator = () => {
 
   return (
     <div className="max-w-lg mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Create Survey</h1>
+      <h1 className="text-3xl font-bold mb-4">Create Survey</h1>
 
-      <div className="mb-4">
+      <div className="p-6 bg-white shadow-md rounded-xl">
         <label className="block mb-2 font-bold" htmlFor="survey-title">
-          Survey Title
+          Survey Title:
         </label>
         <input
           className="w-full px-4 py-2 border border-gray-300 rounded"
           type="text"
           id="survey-title"
+          placeholder="Enter your survey title here."
           value={surveyTitle}
           onChange={(e) => setSurveyTitle(e.target.value)}
         />
       </div>
 
-      <div className="mb-4">
+      <div className="p-6 bg-white mt-6 mb-6 shadow-md rounded-xl">
         <label className="block mb-2 font-bold" htmlFor="survey-description">
           Survey Description
         </label>
@@ -64,7 +66,7 @@ const FormCreator = () => {
       </div>
 
       {questions.map((question, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} className="mb-6 bg-white rounded-xl shadow-md p-6">
           <label className="block mb-2 font-bold">Question {index + 1}</label>
           <div className="flex mb-2">
             <select
@@ -85,7 +87,8 @@ const FormCreator = () => {
             </button>
           </div>
           <textarea
-            className="w-full px-4 py-2 border border-gray-300 rounded mb-2"
+                  className="w-full px-4 py-2 border border-gray-300 rounded mb-2"
+                  placeholder="Enter the question text here"
             value={question.question}
             onChange={(e) => handleQuestionChange(index, e.target.value)}
           ></textarea>
@@ -93,7 +96,8 @@ const FormCreator = () => {
             <div>
               {question.options.map((option, optionIndex) => (
                 <input
-                  key={optionIndex}
+                      key={optionIndex}
+                      placeholder="Enter option here"
                   className="w-full mb-2 px-4 py-2 border border-gray-300 rounded"
                   type="text"
                   value={option}
@@ -109,15 +113,16 @@ const FormCreator = () => {
 
       <div>
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="px-4 py-2 bg-black text-white rounded"
           onClick={handleAddQuestion}
-        >
+              >
+                  <PlusIcon className="h-2"/>
           Add Question
         </button>
       </div>
 
       <div>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded mt-4">
+        <button className="px-4 py-2 bg-indigo-500 text-white rounded mt-4">
           Create Form
         </button>
       </div>

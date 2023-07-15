@@ -387,21 +387,10 @@ export default function Dashboard() {
 
           {/*Cotent begins here*/}
 
-          <main className="py-2">
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-              <div
-                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                aria-hidden="true"
-              >
-                <div
-                  className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                  style={{
-                    clipPath:
-                      "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                  }}
-                />
-              </div>
-              <div className="mx-auto max-w-2xl py-4 sm:py-48 lg:py-8">
+          <main className="py-2 bg-slate-100 min-h-screen">
+            <div className="relative isolate">
+              
+              <div className="mx-auto max-w-2xl ">
                 <ul
                   role="list"
                   className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
@@ -511,43 +500,7 @@ export default function Dashboard() {
             </div>
 
             {/* <PieChart /> */}
-            <div className="text-center">
-              <svg
-                className="mx-auto h-12 w-12 text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  vectorEffect="non-scaling-stroke"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
-                />
-                x
-              </svg>
-              <h3 className="mt-2 text-sm font-semibold text-gray-900">
-                No Surveys
-              </h3>
-              <p className="mt-1 text-sm text-gray-500">
-                Get started by creating a new survey.
-              </p>
-              <div className="mt-6">
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  <PlusIcon
-                    className="-ml-0.5 mr-1.5 h-5 w-5"
-                    aria-hidden="true"
-                    href="/createsurvey"
-                  />
-                  New Survey
-                </button>
-              </div>
-            </div>
+            
           </main>
         </div>
       </div>

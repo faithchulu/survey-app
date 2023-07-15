@@ -473,7 +473,7 @@ export default function Dashboard() {
                   Get started
                 </a>
                 <a
-                  href="/previoussurveys"
+                  href="/previoussurvey"
                   className="text-sm font-semibold leading-6 text-gray-900"
                 >
                   View Previous Surveys <span aria-hidden="true">→</span>
