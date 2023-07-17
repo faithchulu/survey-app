@@ -22,6 +22,8 @@ import LineChart from "../../assets/components/linechart";
 import PieChart from "../../assets/components/piechart";
 import BarChart from "../../assets/components/barchart";
 import DescriptionList from "../../assets/components/descriptionlist";
+import UsersTable from "../../assets/components/usersTable";
+import GetStrated from "../../assets/components/getstarted";
 
 const surveys = [
   {
@@ -462,24 +464,14 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className="m-6 p-4 rounded-xl shadow-md bg-white">
-              <DescriptionList />  
+              
+
+              {/*dynamic table*/}
+              <div className="m-6 rounded-md ">
+                <UsersTable /> 
               </div>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="/createsurvey"
-                  className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
-                </a>
-                <a
-                  href="/previoussurvey"
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                >
-                  View Previous Surveys <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
+              <div> <GetStrated /></div>
+            </div> 
           </main>
         </div>
       </div>
