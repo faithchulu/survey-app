@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/admin/login";
 import Home from "./pages/Home";
-import Survey from "./pages/user/Survey";
 import Visualization from "./pages/admin/visualization";
 import CreateSurvey from "./pages/admin/create_survey";
 import PreviousSurvey from "./pages/admin/previous_survey";
@@ -24,7 +23,6 @@ function App() {
           <Route path="/userhome" element={<UserHome />} />b
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/survey" element={<Survey />} />
           <Route path="/form" element={<FormWizard />} />
           <Route path="/visualization" element={<Visualization />} />
           <Route path="/createsurvey" element={<CreateSurvey />} />
