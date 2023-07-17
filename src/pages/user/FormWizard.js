@@ -1130,11 +1130,11 @@ const renderStep13 = () => (
 
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-cover bg-[url(https://images.unsplash.com/photo-1589362281138-e3f7ebe47f1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxhcHRvcCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60)]">
+    <div className="min-h-screen bg-no-repeat bg-cover bg-slate-100">
       <div className="sticky top-0">
         <NavBar />
       </div>{" "}
-      <div className="bg-black/50 text-white mt-6  max-w-md mx-auto p-4">
+      <div className="bg-black text-white mt-6  max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
         {step === 3 && renderStep3()}

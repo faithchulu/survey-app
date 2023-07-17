@@ -312,15 +312,10 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <main className="py-4">
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-              
-              <div className="mx-auto max-w-2xl py-16 sm:py-48 lg:py-16">
-                
+          <main className="py-4 bg-slate-100 min-h-screen">
+            
                {PieChart()}
-              </div>
              
-            </div>
             
           </main>
         </div>

@@ -35,36 +35,44 @@
       "gender": "male",
       "age": "18",
       "role": "respondent"
+    },
+    {
+      "id": 6,
+      "username": "Nina Chulu",
+      "Password": "Password1",
+      "email": "chulunina@gmail.com",
+      "gender": "Female",
+      "age": "24",
+      "role": "admin"
     }
   ],
-
   "surveys": [
     {
       "id": 1,
       "username": "Faith Chulu",
       "title": "Customer service survey",
-      "desrciption": "A survey to collect customer feedback about the quality of service of our store",
+      "description": "A survey to collect customer feedback about the quality of service of our store",
       "creationDate": "16/01/2023"
     },
     {
       "id": 2,
       "username": "Thabo Lisibi",
       "title": "Cleaness survey",
-      "desrciption": "A survey to collect customer feedback about the cleaness of our store",
+      "description": "A survey to collect customer feedback about the cleaness of our store",
       "creationDate": "04/03/2023"
     },
     {
       "id": 3,
       "username": "Faith Chulu",
       "title": "Promotions Survey",
-      "desrciption": "A survey to collect customer feedback about promotions run in store",
+      "description": "A survey to collect customer feedback about promotions run in store",
       "creationDate": "05/04/2023"
     },
     {
       "id": 4,
       "username": "Thabo Lisibi",
       "title": "Quality of Products",
-      "desrciption": "A survey to collect customer feedback about the quality of product in our store",
+      "description": "A survey to collect customer feedback about the quality of product in our store",
       "creationDate": "15/06/2023"
     }
   ],
@@ -146,7 +154,6 @@
       "optionText": "Very dissatisfied"
     }
   ],
-
   "answers": [
     {
       "id": 1,
