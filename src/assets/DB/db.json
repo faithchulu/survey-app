@@ -1,6 +1,15 @@
 {
   "users": [
     {
+      "id": 1,
+      "username": "Some Phiri",
+      "Password": "Password2",
+      "email": "phiriandrew@gmail.com",
+      "gender": "male",
+      "age": "22",
+      "role": "admin"
+    },
+    {
       "id": 2,
       "username": "Faith Chulu",
       "Password": "Password",
@@ -81,25 +90,25 @@
       "id": 1,
       "surveyId": 1,
       "question": "Please describe your overall experience with the customer service at our store. What did you like or dislike the most?",
-      "questionType": "text"
+      "type": "text"
     },
     {
       "id": 2,
       "surveyId": 1,
       "question": "How would you rate the friendliness of our store's staff?",
-      "questionType": "option"
+      "type": "option"
     },
     {
       "id": 3,
       "surveyId": 1,
       "question": "How satisfied are you with the responsiveness of our customer service?",
-      "questionType": "option"
+      "type": "option"
     },
     {
       "id": 4,
       "surveyId": 1,
       "question": "Is there any specific staff member who stood out to you during your recent visit? If yes, please provide their name and briefly explain why they were exceptional.",
-      "questionType": "text"
+      "type": "text"
     }
   ],
   "options": [
