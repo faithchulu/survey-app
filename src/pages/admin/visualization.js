@@ -13,6 +13,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/20/solid";
 import PieChart from "../../assets/components/piechart";
+import AllSurveys from "../../assets/components/allSurveys";
+import DashboardStats from "../../assets/components/dashboardStats";
 
 const navigation = [
   { name: "Home", href: "/dashboard", icon: HomeIcon, current: false },
@@ -314,7 +316,8 @@ export default function Dashboard() {
 
           <main className="py-4 bg-slate-100 min-h-screen">
             
-               {PieChart()}
+            <DashboardStats  /> 
+            <AllSurveys />
              
             
           </main>
