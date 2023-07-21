@@ -15,6 +15,7 @@ import { ChevronDownIcon, PlusIcon } from "@heroicons/react/20/solid";
 import PieChart from "../../assets/components/piechart";
 import AllSurveys from "../../assets/components/allSurveys";
 import DashboardStats from "../../assets/components/dashboardStats";
+import GenderPieChart from "../../assets/components/genderPieChart";
 
 const navigation = [
   { name: "Home", href: "/dashboard", icon: HomeIcon, current: false },
@@ -315,8 +316,14 @@ export default function Dashboard() {
           </div>
 
           <main className="py-4 bg-slate-100 min-h-screen">
+            <div className="grid grid-cols-2">
+              <div className="bg-white col-span-1 shadow-xl p-4 rounded-md m-6">
+                <GenderPieChart />
+              </div>
+            </div>
+
             
-            <DashboardStats  /> 
+              <DashboardStats /> 
             <AllSurveys />
              
             

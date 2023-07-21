@@ -13,9 +13,8 @@ const GenderPieChart = () => {
       {
         data: [12, 23],
         backgroundColor: [
-          "#FF6384",
           "#36A2EB",
-          
+          "#FF6384",
         ],
       },
     ],
