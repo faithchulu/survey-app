@@ -2,7 +2,17 @@ import logo from "../../assets/images/logo.png";
 
 function Login() {
   return (
-    <div className="App bg-slate-100 min-h-screen">
+    <div className="App bg-slate-100 min-h-screen p-6">
+      <div>
+        <a href="/form" >
+          <button
+                className="flex right-0 justify-center rounded-md bg-black px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"     
+         >
+                Go To Current Survey
+         </button>
+          </a>
+
+      </div>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img className="mx-auto h-20 w-auto" src={logo} alt="Your Company" />
@@ -70,6 +80,7 @@ function Login() {
               </button>
             </div>
           </form>
+          
         </div>
       </div>
     </div>

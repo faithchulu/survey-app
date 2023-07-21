@@ -36,8 +36,8 @@ const FormCreator = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto ">
-      <form action="http://localhost:3031/surveys" method="post">
+    <div className="max-w-xl mx-auto ">
+    
         <h1 className="text-3xl font-bold mb-4">Create Survey</h1>
 
         <div className="p-6 bg-white shadow-md rounded-xl">
@@ -126,13 +126,13 @@ const FormCreator = () => {
 
         <div>
           <button
-            type="submit"
+        
             className="px-4 py-2 bg-indigo-500 text-white rounded mt-4"
           >
             Create Form
           </button>
         </div>
-      </form>
+      
     </div>
   );
 };

@@ -313,13 +313,11 @@ export default function Dashboard() {
           </div>
 
           <main className=" bg-slate-100 min-h-screen">
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-              <div className="mx-auto max-w-2xl ">
+            
                   <div>
                     <FormCreator />
                   </div>
-              </div>
-             </div>
+             
             </main>
         </div>
       </div>

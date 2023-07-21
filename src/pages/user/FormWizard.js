@@ -1140,10 +1140,17 @@ const renderStep13 = () => (
 
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-cover bg-slate-100">
-      <div className="sticky top-0">
-        <NavBar />
-      </div>{" "}
+    <div className="min-h-screen bg-no-repeat bg-cover bg-slate-100 p-6">
+      <div>
+        <a href="/logout" >
+          <button
+                className="flex right-0 justify-center rounded-md bg-black px-6 py-6 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"     
+         >
+                Back
+         </button>
+          </a>
+
+      </div>
       <div className="bg-black text-white mt-6  max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
@@ -1159,10 +1166,7 @@ const renderStep13 = () => (
         {step === 12 && renderStep12()}
         {step === 13 && renderStep13()}
       </div>
-      <div className="sticky bottom -5">
-        {" "}
-       
-      </div>
+      
     </div>
   );
 };

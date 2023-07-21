@@ -316,17 +316,17 @@ export default function Dashboard() {
           </div>
 
           <main className="py-4 bg-slate-100 min-h-screen">
+            
+            <div className="m=6"><DashboardStats /> </div>
+            
             <div className="grid grid-cols-2">
               <div className="bg-white col-span-1 shadow-xl p-4 rounded-md m-6">
                 <GenderPieChart />
               </div>
             </div>
-
             
-              <DashboardStats /> 
             <AllSurveys />
              
-            
           </main>
         </div>
       </div>
