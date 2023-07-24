@@ -13,7 +13,9 @@ import UserHome from "./pages/user/userhome";
 function App() {
   return (
     <div>
+
       <BrowserRouter>
+
         <Routes>
           <Route index element={<Login />} />
           <Route path="/logout" element={<Login />} />
@@ -31,6 +33,8 @@ function App() {
       </BrowserRouter>
     </div>
   );
+
+  
 }
 
 export default App;
