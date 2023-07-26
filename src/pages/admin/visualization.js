@@ -25,7 +25,6 @@ const navigation = [
     icon: UsersIcon,
     current: false,
   },
-  { name: "Current Survey", href: "/form", icon: FolderIcon, current: false },
   {
     name: "View Past Surveys",
     href: "/previoussurvey",

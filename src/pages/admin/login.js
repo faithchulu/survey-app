@@ -1,19 +1,24 @@
 import { useState } from "react";
 import logo from "../../assets/images/logo.png";
+import axios from "axios";
 
 function Login() {
 
   const [email, emailupdate] = useState('');
   const [password, passwordupdate] = useState('');
-
+  const [success, setsuccess] = useState(false);
   const ProceedLogin = (e) =>{
-    e.PreventDefault();
+    //e.PreventDefault();
 
     if(validate()){
      // console.log('proceed'); 
     
-    fetch("http://localhost:3031/users/"+email).then((res)=>{
+    axios.get("http://localhost:3031/users/"+email).then((res)=>{
       return res.json();
+    }).then((resp)=>{
+      console.log(resp);
+    }).catch((err)=>{
+      console.log("Login failed due to: " + err.message);
     })
     
     }
@@ -78,7 +83,6 @@ function Login() {
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
-            </div>
 
             <div>
               <div className="flex items-center justify-between">
@@ -86,8 +90,10 @@ function Login() {
                   htmlFor="password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
+            
                   Password
                 </label>
+                </div>            
                 <div className="text-sm">
                   <a
                     href="/dashboard"
