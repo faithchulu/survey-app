@@ -1,8 +1,43 @@
+import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 
 function Login() {
+
+  const [email, emailupdate] = useState('');
+  const [password, passwordupdate] = useState('');
+
+  const ProceedLogin = (e) =>{
+    e.PreventDefault();
+
+    if(validate()){
+     // console.log('proceed'); 
+    
+    fetch("http://localhost:3031/users/"+email).then((res)=>{
+      return res.json();
+    })
+    
+    }
+
+  }
+
+  const validate =()=>{
+    let result = true;
+
+    if(password === '' || password === null){
+      result=false;
+      alert("Please enter password!");
+    }
+
+    if(email === '' || email === null){
+      result=false;
+      alert.warning("Please enter email!");
+    }
+    return result;
+  }
+
   return (
     <div className="App bg-slate-100 min-h-screen p-6">
+      
       <div>
         <a href="/form" >
           <button
@@ -22,7 +57,8 @@ function Login() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+
+          <form onSubmit={ProceedLogin} className="space-y-6" /*action="#" method="POST"*/>
             <div>
               <label
                 htmlFor="email"
@@ -35,6 +71,8 @@ function Login() {
                   id="email"
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={e=>emailupdate(e.target.value)}
                   autoComplete="email"
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -66,6 +104,8 @@ function Login() {
                   type="password"
                   autoComplete="current-password"
                   required
+                  onChange={e=>passwordupdate(e.target.value)}
+                  value={password}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
