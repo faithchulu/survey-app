@@ -8,14 +8,16 @@ function Login() {
   const [password, passwordupdate] = useState('');
   const [success, setsuccess] = useState(false);
   const ProceedLogin = (e) =>{
-    //e.PreventDefault();
+    e.preventDefault();
 
     if(validate()){
      // console.log('proceed'); 
     
-    axios.get("http://localhost:3031/users/"+email).then((res)=>{
-      return res.json();
-    }).then((resp)=>{
+    axios.get("http://localhost:3031/users?email="+email).then((res)=>{
+     
+    console.log(res);
+    return res;
+   }).then((resp)=>{
       console.log(resp);
     }).catch((err)=>{
       console.log("Login failed due to: " + err.message);
@@ -79,7 +81,7 @@ function Login() {
                   value={email}
                   onChange={e=>emailupdate(e.target.value)}
                   autoComplete="email"
-                  required
+                  
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -109,7 +111,7 @@ function Login() {
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  required
+                  
                   onChange={e=>passwordupdate(e.target.value)}
                   value={password}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
