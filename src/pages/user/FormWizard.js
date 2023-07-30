@@ -9,6 +9,7 @@
 // }
 
 import React, { useState } from "react";
+import supermarket from "../../assets/images/supermarket.jpg"
 import NavBar from "../../assets/components/navbar";
 import Footer from "../../assets/components/footer";
 
@@ -1140,7 +1141,7 @@ const renderStep13 = () => (
 
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-cover bg-slate-100 p-6">
+    <div className="min-h-screen bg-no-repeat bg-cover bg-center p-6" style={{ backgroundImage: `url(${supermarket})`}}>
       <div>
         <a href="/logout" >
           <button
@@ -1151,7 +1152,7 @@ const renderStep13 = () => (
           </a>
 
       </div>
-      <div className="bg-black text-white mt-6  max-w-md mx-auto p-4">
+      <div className="bg-black opacity-80 text-white mt-6  max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
         {step === 3 && renderStep3()}

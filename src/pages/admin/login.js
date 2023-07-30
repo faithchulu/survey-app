@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/images/logo.png";
+import supermarket from "../../assets/images/supermarket.jpg"
 import axios from "axios";
 
 function Login() {
@@ -11,18 +12,28 @@ function Login() {
     e.preventDefault();
 
     if(validate()){
-     // console.log('proceed'); 
     
     axios.get("http://localhost:3031/users?email="+email).then((res)=>{
-     
-    console.log(res);
     return res;
    }).then((resp)=>{
       console.log(resp);
+       
+      if (resp.data.password == password){
+        //login
+
+      }
+      else{
+        alert("Login failed try again!");
+      }
+
+
     }).catch((err)=>{
       console.log("Login failed due to: " + err.message);
     })
     
+
+    
+
     }
 
   }
@@ -43,7 +54,7 @@ function Login() {
   }
 
   return (
-    <div className="App bg-slate-100 min-h-screen p-6">
+    <div className="App bg-cover bg-center min-h-screen p-6"  style={{ backgroundImage: `url(${supermarket})` }}>
       
       <div>
         <a href="/form" >
