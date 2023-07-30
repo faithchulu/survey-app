@@ -16,11 +16,15 @@ function Login() {
     axios.get("http://localhost:3031/users?email="+email).then((res)=>{
     return res;
    }).then((resp)=>{
-      console.log(resp);
-       
-      if (resp.data.password == password){
-        //login
+      
+      console.log(resp)
+      const data = resp.data;
+      const pswd = data.password;
+      console.log(pswd);
 
+      if (pswd == password){
+        console.log(resp.data.password);
+        
       }
       else{
         alert("Login failed try again!");
