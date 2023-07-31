@@ -1,13 +1,3 @@
-// import QuestionWizard from "../../assets/components/questionWizard";
-
-// export default function FormWizard() {
-//   return (
-//     <div>
-//       <QuestionWizard/>
-//     </div>
-//   )
-// }
-
 import React, { useState } from "react";
 import supermarket from "../../assets/images/supermarket.jpg"
 import NavBar from "../../assets/components/navbar";

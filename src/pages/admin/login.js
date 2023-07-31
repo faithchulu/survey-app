@@ -2,45 +2,48 @@ import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import supermarket from "../../assets/images/supermarket.jpg"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
 
   const [email, emailupdate] = useState('');
   const [password, passwordupdate] = useState('');
   const [success, setsuccess] = useState(false);
-  const ProceedLogin = (e) =>{
+  let navigate = useNavigate();  // Get the navigate function
+
+ 
+
+  const ProceedLogin = (e) => {
     e.preventDefault();
-
-    if(validate()){
-    
-    axios.get("http://localhost:3031/users?email="+email).then((res)=>{
-    return res;
-   }).then((resp)=>{
-      
-      console.log(resp)
-      const data = resp.data;
-      const pswd = data.password;
-      console.log(pswd);
-
-      if (pswd == password){
-        console.log(resp.data.password);
-        
-      }
-      else{
-        alert("Login failed try again!");
-      }
-
-
-    }).catch((err)=>{
-      console.log("Login failed due to: " + err.message);
-    })
     
 
-    
-
+  
+    if(validate()) {
+      axios.get("http://localhost:3031/users?email="+email)
+        .then(res => {
+          if (res.data.length === 0) {
+            throw new Error('No user found with this email');
+          }
+          console.log(res)
+          return res.data[0];  // get first user (we expect unique emails)
+        })
+        .then(user => {
+          if (user.Password === password) {
+            navigate('/dashboard');  // Use navigate for routing
+          } else {
+            alert("Login failed try again!");
+          }
+        })
+        .catch(err => {
+          console.error("Login failed due to: " + err.message);
+          alert("Login failed try again!");
+        });
     }
-
   }
+   
+  
+  
 
   const validate =()=>{
     let result = true;
