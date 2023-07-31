@@ -35,7 +35,7 @@ return(
   <div>
 
 <SideNav>
-<div className="relative isolate  pt-4 ">
+<div className="relative isolate  pt-4 bg-slate-50">
                 
                 <h3 className=" font-bold m-6 tracking-tight text-gray-900 sm:text-3xl">
                   Sumary for the last 30 days
