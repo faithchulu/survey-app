@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Some Phiri",
+      "Password": "Password2",
+      "email": "phiriandrew@gmail.com",
+      "gender": "male",
+      "age": "22",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "Faith Chulu",
+      "Password": "Password",
+      "email": "chulufaith126@gmail.com",
+      "gender": "Female",
+      "age": "21",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "username": "Thabo Lisibi",
+      "Password": "PassWord",
+      "email": "thabolisibi@gmail.com",
+      "gender": "Female",
+      "age": "21",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "username": "",
+      "Password": "",
+      "email": "phiriandrew@gmail.com",
+      "gender": "male",
+      "age": "22",
+      "role": "respondent"
+    },
+    {
+      "id": 5,
+      "username": "",
+      "Password": "",
+      "email": "selwapumulo@gmail.com",
+      "gender": "male",
+      "age": "18",
+      "role": "respondent"
+    },
+    {
+      "id": 6,
+      "username": "Nina Chulu",
+      "Password": "Password1",
+      "email": "chulunina@gmail.com",
+      "gender": "Female",
+      "age": "24",
+      "role": "admin"
+    }
+  ],
+  "surveys": [
+    {
+      "id": 1,
+      "username": "Faith Chulu",
+      "title": "Customer service survey",
+      "description": "A survey to collect customer feedback about the quality of service of our store",
+      "creationDate": "16/01/2023"
+    },
+    {
+      "id": 2,
+      "username": "Thabo Lisibi",
+      "title": "Cleaness survey",
+      "description": "A survey to collect customer feedback about the cleaness of our store",
+      "creationDate": "04/03/2023"
+    },
+    {
+      "id": 3,
+      "username": "Faith Chulu",
+      "title": "Promotions Survey",
+      "description": "A survey to collect customer feedback about promotions run in store",
+      "creationDate": "05/04/2023"
+    },
+    {
+      "id": 4,
+      "username": "Thabo Lisibi",
+      "title": "Quality of Products",
+      "description": "A survey to collect customer feedback about the quality of product in our store",
+      "creationDate": "15/06/2023"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "surveyId": 1,
+      "question": "Please describe your overall experience with the customer service at our store. What did you like or dislike the most?",
+      "type": "text"
+    },
+    {
+      "id": 2,
+      "surveyId": 1,
+      "question": "How would you rate the friendliness of our store's staff?",
+      "type": "option"
+    },
+    {
+      "id": 3,
+      "surveyId": 1,
+      "question": "How satisfied are you with the responsiveness of our customer service?",
+      "type": "option"
+    },
+    {
+      "id": 4,
+      "surveyId": 1,
+      "question": "Is there any specific staff member who stood out to you during your recent visit? If yes, please provide their name and briefly explain why they were exceptional.",
+      "type": "text"
+    }
+  ],
+  "options": [
+    {
+      "id": 1,
+      "questionId": 2,
+      "optionText": "Excellent"
+    },
+    {
+      "id": 2,
+      "questionId": 2,
+      "optionText": "Good"
+    },
+    {
+      "id": 3,
+      "questionId": 2,
+      "optionText": "Average"
+    },
+    {
+      "id": 4,
+      "questionId": 2,
+      "optionText": "Poor"
+    },
+    {
+      "id": 5,
+      "questionId": 2,
+      "optionText": "Very poor"
+    },
+    {
+      "id": 6,
+      "questionId": 3,
+      "optionText": "Very satisfied"
+    },
+    {
+      "id": 7,
+      "questionId": 3,
+      "optionText": "Satisfied"
+    },
+    {
+      "id": 8,
+      "questionId": 3,
+      "optionText": "Neutral"
+    },
+    {
+      "id": 9,
+      "questionId": 3,
+      "optionText": "Dissatisfied"
+    },
+    {
+      "id": 10,
+      "questionId": 3,
+      "optionText": "Very dissatisfied"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "questionId": 1,
+      "answerText": "It was great!",
+      "optionId": "",
+      "submissionDate": "22/01/2023"
+    },
+    {
+      "id": 2,
+      "questionId": 2,
+      "answerText": "",
+      "optionId": "3",
+      "submissionDate": "22/01/2023"
+    },
+    {
+      "id": 3,
+      "questionId": 3,
+      "answerText": "",
+      "optionId": "3",
+      "submissionDate": "22/01/2023"
+    },
+    {
+      "id": 4,
+      "questionId": 4,
+      "answerText": "Mr Phiri he was very polite",
+      "optionId": "",
+      "submissionDate": "22/01/2023"
+    }
+  ]
+}

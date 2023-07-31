@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import supermarket from "../../assets/images/supermarket.jpg"
 import NavBar from "../../assets/components/navbar";
 import Footer from "../../assets/components/footer";
 
@@ -1190,15 +1191,22 @@ const FormWizars = ({ surveyId, questions }) => {
 };
 
   return (
-    <div className="bg-no-repeat bg-cover bg-[url(https://images.unsplash.com/photo-1589362281138-e3f7ebe47f1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxhcHRvcCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60)]">
-      <div className="sticky top-0">
-        <NavBar />
-      </div>{" "}
-      <div className="bg-black/50 text-white mt-6  max-w-md mx-auto p-4">
+    <div className="min-h-screen bg-no-repeat bg-cover bg-center p-6" style={{ backgroundImage: `url(${supermarket})`}}>
+      <div>
+        <a href="/logout" >
+          <button
+                className="flex right-0 justify-center rounded-md bg-black px-6 py-6 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"     
+         >
+                Back
+         </button>
+          </a>
+
+      </div>
+      <div className="bg-black opacity-80 text-white mt-6  max-w-md mx-auto p-4">
         {step === 1 && renderStep1()}
         {step === 2 && renderStep2()}
         {step === 3 && renderStep3()}
-        {step === 4 && renderStep4()}
+        {step === 4 && renderStep4()} 
         {step === 5 && renderStep5()}
         {step === 6 && renderStep6()}
         {step === 7 && renderStep7()}
@@ -1209,10 +1217,7 @@ const FormWizars = ({ surveyId, questions }) => {
         {step === 12 && renderStep12()}
         {step === 13 && renderStep13()}
       </div>
-      <div className="sticky">
-        {" "}
-        <Footer />
-      </div>
+      
     </div>
   );
 };

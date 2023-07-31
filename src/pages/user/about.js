@@ -1,6 +1,5 @@
 import Footer from "../../assets/components/footer";
-import NavBar from "../../assets/components/navbar";
-import { useState } from "react";
+import NavBar from "../../assets/components/navbar"
 
 const stats = [
   { label: "Stores accross the country", value: "Over 100" },
