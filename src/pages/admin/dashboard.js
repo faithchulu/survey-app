@@ -383,6 +383,14 @@ export default function Dashboard() {
           New Survey
         </button>
       </div>
+     
+    <div>
+      <h1>Welcome to the Home page!</h1>
+      {/* Your home page content goes here */}
+    </div>
+
+export default Home;
+
     </div>
           </main>
         </div>

@@ -10,6 +10,8 @@ import Dashboard from "./pages/admin/dashboard";
 import About from "./pages/user/about";
 import Latest from "./pages/user/latest";
 import UserHome from "./pages/user/userhome";
+import CreateForm from "./pages/admin/createform";
+import ViewSurvey from "./pages/admin/view_survey";
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/latest" element={<Latest />} />
-          <Route path="/userhome" element={<UserHome />} />b
+          <Route path="/userhome" element={<UserHome />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<Survey />} />
@@ -29,6 +31,8 @@ function App() {
           <Route path="/visualization" element={<Visualization />} />
           <Route path="/createsurvey" element={<CreateSurvey />} />
           <Route path="/previoussurvey" element={<PreviousSurvey />} />
+          <Route path="/create" element={<CreateForm/>} />
+          <Route path="/view" element={<ViewSurvey/>} />
         </Routes>
       </BrowserRouter>
     </div>

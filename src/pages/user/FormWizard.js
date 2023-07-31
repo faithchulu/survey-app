@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import NavBar from "../../assets/components/navbar";
 import Footer from "../../assets/components/footer";
 
@@ -1128,6 +1128,66 @@ const renderStep13 = () => (
   </div>
 );
 
+const FormWizars = ({ surveyId, questions }) => {
+  const [answers, setAnswers] = useState(Array(questions.length).fill(''));
+
+  const handleAnswerChange = (e, index) => {
+    const updatedAnswers = [...answers];
+    updatedAnswers[index] = e.target.value;
+    setAnswers(updatedAnswers);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const submissionData = {
+        surveyId,
+        answers,
+      };
+
+      const response = await fetch('/api/submit_survey_answers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        // Clear form after successful submission
+        setAnswers(Array(questions.length).fill(''));
+        // Optionally show a success message or redirect to a thank you page
+      } else {
+        // Handle errors when the API call fails
+        console.error('Error submitting survey answers:', response);
+        // Optionally show an error message to the user
+      }
+    } catch (error) {
+      // Handle other errors (e.g., network issues)
+      console.error('Error submitting survey answers:', error);
+      // Optionally show an error message to the user
+    }
+  };
+  
+  return (
+    <form onSubmit={handleSubmit}>
+      {questions.map((question, index) => (
+        <div key={index}>
+          <label htmlFor={`question-${index}`}>{question}</label>
+          <input
+            type="text"
+            id={`question-${index}`}
+            value={answers[index]}
+            onChange={(e) => handleAnswerChange(e, index)}
+          />
+        </div>
+      ))}
+
+      <button type="submit">Submit Survey</button>
+    </form>
+  );
+};
 
   return (
     <div className="bg-no-repeat bg-cover bg-[url(https://images.unsplash.com/photo-1589362281138-e3f7ebe47f1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxhcHRvcCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60)]">
@@ -1158,3 +1218,4 @@ const renderStep13 = () => (
 };
 
 export default FormWizard;
+
