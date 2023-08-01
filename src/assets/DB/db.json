@@ -53,6 +53,15 @@
       "gender": "Female",
       "age": "24",
       "role": "admin"
+    },
+    {
+      "id": 7,
+      "username": "Janet Smith",
+      "Password": "Password1",
+      "email": "jsmith@gmail.com",
+      "gender": "Female",
+      "age": "18",
+      "role": "user"
     }
   ],
   "surveys": [

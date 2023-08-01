@@ -7,9 +7,10 @@ import PreviousSurvey from "./pages/admin/previous_survey";
 import FormWizard from "./pages/user/FormWizard";
 import Dashboard from "./pages/admin/dashboard";
 import About from "./pages/user/about";
-import Latest from "./pages/user/latest";
+import Latest from "./pages/user/selectSurvey";
 import UserHome from "./pages/user/userhome";
 import SurveyDetails from "./pages/admin/surveyDetails"; // Update with your correct import path
+import SelectSurvey from "./pages/user/selectSurvey";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/visualization" element={<Visualization />} />
           <Route path="/createsurvey" element={<CreateSurvey />} />
           <Route path="/previoussurvey" element={<PreviousSurvey />} />
+          <Route path="/selectsurvey" element={<SelectSurvey/>} />
+          <Route path="/formwizard/:surveyId" element={<FormWizard />} />
           <Route path="/survey/:id" element={<SurveyDetails />} /> {/* Add this line */}
         </Routes>
       </BrowserRouter>
