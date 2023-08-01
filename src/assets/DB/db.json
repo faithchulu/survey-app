@@ -83,6 +83,41 @@
       "title": "Quality of Products",
       "description": "A survey to collect customer feedback about the quality of product in our store",
       "creationDate": "15/06/2023"
+    },
+    {
+      "username": "Some Username",
+      "title": "Test Survey",
+      "description": "Testing create survey 123",
+      "creationDate": "31/07/2023",
+      "id": 5
+    },
+    {
+      "username": "Some Username",
+      "title": "TEST SURVEY3",
+      "description": "Testing survey 3 4 5",
+      "creationDate": "31/07/2023",
+      "id": 6
+    },
+    {
+      "username": "Some Username",
+      "title": "TEST SURVEY CREATION FORM 4",
+      "description": "Testing 456",
+      "creationDate": "31/07/2023",
+      "id": 7
+    },
+    {
+      "username": "Some Username",
+      "title": "TEST SURVEY 5",
+      "description": "Testing 567",
+      "creationDate": "31/07/2023",
+      "id": 8
+    },
+    {
+      "username": "Some Username",
+      "title": "TEST 6",
+      "description": "testing survey 678",
+      "creationDate": "31/07/2023",
+      "id": 9
     }
   ],
   "questions": [
@@ -109,6 +144,110 @@
       "surveyId": 1,
       "question": "Is there any specific staff member who stood out to you during your recent visit? If yes, please provide their name and briefly explain why they were exceptional.",
       "type": "text"
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "surveyId": 12,
+      "id": 5
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 12,
+      "id": 6
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "How is test 3?",
+      "surveyId": 13,
+      "id": 7
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 13,
+      "id": 8
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "How easy is it to test 4?",
+      "surveyId": 7,
+      "id": 9
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes ",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 7,
+      "id": 10
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "How is test 5?",
+      "surveyId": 8,
+      "id": 11
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "easy",
+        "neither",
+        "hard",
+        "",
+        ""
+      ],
+      "surveyId": 8,
+      "id": 12
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "How is survey 6?",
+      "surveyId": 9,
+      "id": 13
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes ",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 9,
+      "id": 14
     }
   ],
   "options": [

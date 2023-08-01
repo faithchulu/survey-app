@@ -19,7 +19,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Home", href: "/dashboard", icon: HomeIcon, current: true,},
+  { name: "Home", href: "/dashboard", icon: HomeIcon, current: false,},
   {
     name: "Create Survey",
     href: "/createsurvey",

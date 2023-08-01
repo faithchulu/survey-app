@@ -34,11 +34,11 @@ export default function AllSurveys() {
                 className="overflow-hidden rounded-xl border shadow-xl border-gray-200"
               >
                 <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-white p-4">
-                  <img
+                  {/* <img
                     src={logo}
                     alt={data.title}
                     className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
-                  />
+                  /> */}
                   <div className="text-sm font-medium leading-6 text-gray-900">
                     {data.title}
                   </div>

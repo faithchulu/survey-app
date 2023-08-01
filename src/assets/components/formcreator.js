@@ -1,10 +1,48 @@
 import { PlusIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
+import axios from "axios";
 
 const FormCreator = () => {
   const [surveyTitle, setSurveyTitle] = useState("");
   const [surveyDescription, setSurveyDescription] = useState("");
   const [questions, setQuestions] = useState([]);
+
+  const handleSubmit = async () => {
+    // assuming username is available in your context
+    const username = "Some Username"; 
+
+    // Create survey object
+    const survey = {
+      username,
+      title: surveyTitle,
+      description: surveyDescription,
+      creationDate: new Date().toLocaleDateString(),
+    };
+
+    try {
+      // Send POST request to create a new survey
+      const surveyResponse = await axios.post('http://localhost:3031/surveys', survey);
+
+      // Iterate through each question and send a POST request to create a new question for the survey
+      for (const question of questions) {
+        const newQuestion = {
+          ...question,
+          surveyId: surveyResponse.data.id,
+        };
+
+        await axios.post('http://localhost:3031/questions', newQuestion);
+      }
+
+       // Reset the form
+       setSurveyTitle("");
+       setSurveyDescription("");
+       setQuestions([]);
+     } catch (error) {
+       console.error("Error creating survey", error);
+     }
+   };
+  
+
 
   const handleAddQuestion = () => {
     setQuestions([...questions, { type: "paragraph", options: [""] }]);
@@ -128,6 +166,7 @@ const FormCreator = () => {
           <button
         
             className="px-4 py-2 bg-indigo-500 text-white rounded mt-4"
+            onClick={handleSubmit}
           >
             Create Form
           </button>
