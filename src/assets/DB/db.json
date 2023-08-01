@@ -118,6 +118,13 @@
       "description": "testing survey 678",
       "creationDate": "31/07/2023",
       "id": 9
+    },
+    {
+      "username": "Some Username",
+      "title": "TEST8",
+      "description": "Testing 8 9 10",
+      "creationDate": "01/08/2023",
+      "id": 10
     }
   ],
   "questions": [
@@ -248,6 +255,27 @@
       ],
       "surveyId": 9,
       "id": 14
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "test survey 8",
+      "surveyId": 10,
+      "id": 15
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 10,
+      "id": 16
     }
   ],
   "options": [

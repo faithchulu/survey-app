@@ -32,7 +32,7 @@ const FormCreator = () => {
 
         await axios.post('http://localhost:3031/questions', newQuestion);
       }
-
+        alert("Survey Created sucessfully!");
        // Reset the form
        setSurveyTitle("");
        setSurveyDescription("");

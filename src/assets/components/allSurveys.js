@@ -26,13 +26,10 @@ export default function AllSurveys() {
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
-        >
-          {data.map((data) => (
-            <Link to="ïndex">
-              <li
-                key={data.id}
-                className="overflow-hidden rounded-xl border shadow-xl border-gray-200"
-              >
+        >{data.map((data) => (
+          <Link to={`/survey/${data.id}`}>
+            <li key={data.id} className="overflow-hidden rounded-xl border shadow-xl border-gray-200">
+              
                 <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-white p-4">
                   {/* <img
                     src={logo}
@@ -60,20 +57,20 @@ export default function AllSurveys() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-white" : "",
-                                "block px-3 py-1 text-sm leading-6 text-gray-900"
-                              )}
-                            >
-                              View
-                              <span className="sr-only">, {data.title}</span>
-                            </a>
-                          )}
-                        </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            to={`/survey/${data.id}`}
+                            className={classNames(
+                              active ? "bg-white" : "",
+                              "block px-3 py-1 text-sm leading-6 text-gray-900"
+                            )}
+                          >
+                            View
+                            <span className="sr-only">, {data.title}</span>
+                          </Link>
+                        )}
+                      </Menu.Item>
 
                         <Menu.Item>
                           {({ active }) => (
