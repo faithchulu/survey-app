@@ -5,6 +5,9 @@ import { Fragment, useState } from "react";
 import { useEffect } from "react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
+import supermarket from "../../assets/images/supermarket.jpg"
+
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -19,7 +22,21 @@ export default function SelectSurvey() {
       console.log(err));
   }, []);
   return (
-    <div>
+    <div className="bg-cover bg-center min-h-screen p-6"  style={{ backgroundImage: `url(${supermarket})` }}>
+     
+     
+
+     <div>
+        <a href="/logout" >
+          <button
+                className="flex right-0 justify-center rounded-md bg-black px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"     
+         >
+                Back
+         </button>
+          </a>
+
+      </div>
+     
       <div className="mx-auto max-w-2xl ">
         <ul
           role="list"
