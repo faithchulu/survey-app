@@ -134,6 +134,13 @@
       "description": "Testing 8 9 10",
       "creationDate": "01/08/2023",
       "id": 10
+    },
+    {
+      "username": "Some Username",
+      "title": "Suvrey Faith",
+      "description": "sdffghjkl",
+      "creationDate": "04/08/2023",
+      "id": 11
     }
   ],
   "questions": [
@@ -285,6 +292,27 @@
       ],
       "surveyId": 10,
       "id": 16
+    },
+    {
+      "type": "paragraph",
+      "options": [
+        ""
+      ],
+      "question": "question1 paragraph",
+      "surveyId": 11,
+      "id": 17
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "yes",
+        "no",
+        "",
+        "",
+        ""
+      ],
+      "surveyId": 11,
+      "id": 18
     }
   ],
   "options": [

@@ -20,7 +20,7 @@ function Login() {
 
   
     if(validate()) {
-      axios.get("http://localhost:3031/users?email="+email)
+      axios.get("http://localhost:4000/users?email="+email)
         .then(res => {
           if (res.data.length === 0) {
             throw new Error('No user found with this email');
