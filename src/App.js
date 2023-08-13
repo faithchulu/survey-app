@@ -15,9 +15,10 @@ import UserContext from "./UserContext";
 import { useState } from "react";
 
 function App() {
+  const [userId, setUserId] = useState(null);
   const [loggedInUsername, setLoggedInUsername] = useState('');
   return (
-    <UserContext.Provider value={{ loggedInUsername, setLoggedInUsername }}>
+    <UserContext.Provider value={{ loggedInUsername, setLoggedInUsername, userId, setUserId }}>
     <div>
       <BrowserRouter>
         <Routes>

@@ -38,9 +38,6 @@ function classNames(...classes) {
 export default function Dashboard(){
 
   const { loggedInUsername } = useContext(UserContext);
-  let location = useLocation();
-  const username = location.state?.username || "DefaultUsername"; 
-
 
   return(
   <div>

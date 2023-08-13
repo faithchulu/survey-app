@@ -20,6 +20,8 @@ export default function AllSurveys() {
       .catch((err) =>
       console.log(err));
   }, []);
+
+
   return (
     <div>
       <div className="mx-auto max-w-2xl ">
@@ -93,13 +95,13 @@ export default function AllSurveys() {
                 <dl className="-my-3 divide-y divide-gray-100 bg-white px-6 py-4 text-sm leading-6">
                   <div className="flex justify-between gap-x-4 py-3 bg-white">
                     <dt className="text-gray-500">Description: </dt>
-                    {/* <dd className="text-gray-500"> {data.description}</dd> */}
+                    <dd className="text-gray-500"> {data.description}</dd>
                   </div>
                   <div>
                     <dt className="text-gray-500">Created: </dt>
                     <dd className="text-gray-700">
-                      <time dateTime={data.creationDate}>
-                        {data.creationDate}
+                      <time dateTime={data.creation_date}>
+                        {data.creation_date}
                       </time>
                     </dd>
                   </div>

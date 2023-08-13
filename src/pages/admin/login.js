@@ -1,21 +1,18 @@
 import bcrypt from "bcryptjs";
-import { useState, useEffect } from "react"; 
+import React, { useState, useEffect, useContext } from 'react';
 import logo from "../../assets/images/logo.png";
 import supermarket from "../../assets/images/supermarket.jpg"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../../UserContext";
 
 
 function Login() {
 
   const [email, emailupdate] = useState('');
   const [password, passwordupdate] = useState('');
-  const [loggedInUsername, setLoggedInUsername] = useState('');
   const [success, setsuccess] = useState(false);
-  useEffect(() => {
-    console.log("Updated username after login:", loggedInUsername);
-  }, [loggedInUsername]);
-  
+  const { setLoggedInUsername, setUserId } = useContext(UserContext);
   let navigate = useNavigate();  // Get the navigate function
 
  
@@ -42,17 +39,15 @@ function Login() {
             }
   
             if (isMatch) {
-              const name = user.username;
-              setLoggedInUsername(name);
-              console.log("Logged in username within callback:", name);
-              navigate('/dashboard', { state: { username: name } }); 
 
+              const name = user.username;
+              const userId = user.id;
+
+              setLoggedInUsername(name);
+              setUserId(userId);
               console.log("login true");
               navigate('/dashboard');  // Use navigate for routing
             
-              setLoggedInUsername(user.username);
-              console.log("Username after login:", loggedInUsername);
- 
             } else {
               alert("Login failed, incorrect password!");
             }

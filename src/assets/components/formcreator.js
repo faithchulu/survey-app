@@ -1,23 +1,28 @@
 import { PlusIcon } from "@heroicons/react/24/outline";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
+import UserContext from "../../UserContext";
+
+
 
 const FormCreator = () => {
   const [surveyTitle, setSurveyTitle] = useState("");
   const [surveyDescription, setSurveyDescription] = useState("");
   const [questions, setQuestions] = useState([]);
+  const { userId } = useContext(UserContext);
 
   const handleSubmit = async () => {
-    // assuming username is available in your context
-    const username = "Some Username"; 
 
-    // Create survey object
-    const survey = {
-      username,
-      title: surveyTitle,
-      description: surveyDescription,
-      creationDate: new Date().toLocaleDateString(),
-    };
+    let currentDate = new Date();
+    let creation_date = currentDate.toLocaleDateString() + ' ' + currentDate.toLocaleTimeString();
+    
+   // Create survey object with userId included
+   const survey = {
+    user_id: 1, // Include userId here
+    title: surveyDescription,
+    description: surveyTitle,
+    creation_date: creation_date
+  };
 
     try {
       // Send POST request to create a new survey
