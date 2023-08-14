@@ -9,7 +9,7 @@ const GenderPieChart = () => {
   const [genderData, setGenderData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3031/users')
+    axios.get('http://localhost:4000/users')
       .then((response) => {
         const data = response.data;
 

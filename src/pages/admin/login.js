@@ -1,4 +1,5 @@
-import { useState } from "react";
+import bcrypt from "bcryptjs";
+import { useState, useEffect } from "react"; 
 import logo from "../../assets/images/logo.png";
 import supermarket from "../../assets/images/supermarket.jpg"
 import axios from "axios";
@@ -9,40 +10,60 @@ function Login() {
 
   const [email, emailupdate] = useState('');
   const [password, passwordupdate] = useState('');
+  const [loggedInUsername, setLoggedInUsername] = useState('');
   const [success, setsuccess] = useState(false);
+  useEffect(() => {
+    console.log("Updated username after login:", loggedInUsername);
+  }, [loggedInUsername]);
+  
   let navigate = useNavigate();  // Get the navigate function
 
  
 
   const ProceedLogin = (e) => {
     e.preventDefault();
-    
-
   
-    if(validate()) {
-      axios.get("http://localhost:4000/users?email="+email)
+    if (validate()) {
+      axios.get("http://localhost:4000/users?email=" + email)
         .then(res => {
           if (res.data.length === 0) {
             throw new Error('No user found with this email');
           }
-          console.log(res)
+          console.log(res);
           return res.data[0];  // get first user (we expect unique emails)
         })
         .then(user => {
-          if (user.Password === password) {
-            navigate('/dashboard');  // Use navigate for routing
-          } else {
-            alert("Login failed try again!");
-          }
+          // Use bcrypt to compare the entered password with the hashed password from the database
+          bcrypt.compare(password, user.password, (err, isMatch) => {
+            if (err) {
+              console.error("Error during password comparison:", err);
+              alert("Login failed, try again!");
+              return;
+            }
+  
+            if (isMatch) {
+              const name = user.username;
+              setLoggedInUsername(name);
+              console.log("Logged in username within callback:", name);
+              navigate('/dashboard', { state: { username: name } }); 
+
+              console.log("login true");
+              navigate('/dashboard');  // Use navigate for routing
+            
+              setLoggedInUsername(user.username);
+              console.log("Username after login:", loggedInUsername);
+ 
+            } else {
+              alert("Login failed, incorrect password!");
+            }
+          });
         })
         .catch(err => {
-          console.error("Login failed due to: " + err.message);
-          alert("Login failed try again!");
+          console.error("Login failed due to:", err.message);
+          alert("Login failed, try again!");
         });
     }
   }
-   
-  
   
 
   const validate =()=>{

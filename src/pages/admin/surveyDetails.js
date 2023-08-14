@@ -12,8 +12,8 @@ export default function SurveyDetails() {
   useEffect(() => {
     const getSurvey = async () => {
       try {
-        const surveyResponse = await axios.get(`http://localhost:3031/surveys/${id}`);
-        const questionsResponse = await axios.get(`http://localhost:3031/questions?surveyId=${id}`);
+        const surveyResponse = await axios.get(`http://localhost:4000/surveys/${id}`);
+        const questionsResponse = await axios.get(`http://localhost:4000/questions?surveyId=${id}`);
         setSurvey(surveyResponse.data);
         setQuestions(questionsResponse.data);
       } catch (error) {

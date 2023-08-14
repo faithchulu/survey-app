@@ -16,7 +16,7 @@ export default function SelectSurvey() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3031/surveys")
+      .get("http://localhost:4000/surveys")
       .then((res) => setData(res.data))
       .catch((err) =>
       console.log(err));

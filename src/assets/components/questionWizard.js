@@ -18,7 +18,7 @@ const QuestionWizard = () => {
     try {
       // Replace 'YOUR_JSON_SERVER_URL' with the actual URL of your JSON server endpoint
       const response = await axios.post(
-        "http://localhost:3031/answers/answers",
+        "http://localhost:4000/answers/answers",
         {
           ...formData,
           submissionDate: new Date().toISOString(), // Add the current date as submissionDate

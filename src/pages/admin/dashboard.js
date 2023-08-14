@@ -10,6 +10,11 @@ import LineChart from "../../assets/components/linechart";
 import {
  EllipsisHorizontalIcon,
 } from "@heroicons/react/20/solid";
+import UserContext from "../../UserContext";
+import React, { useContext } from 'react';
+import { useLocation } from "react-router-dom";
+
+
 
 const surveys = [
   {
@@ -31,10 +36,16 @@ function classNames(...classes) {
 
 
 export default function Dashboard(){
-return(
+
+  const { loggedInUsername } = useContext(UserContext);
+  let location = useLocation();
+  const username = location.state?.username || "DefaultUsername"; 
+
+
+  return(
   <div>
 
-<SideNav>
+<SideNav username={loggedInUsername}>
 <div className="relative isolate  pt-4 bg-slate-50">
                 
                 <h3 className=" font-bold m-6 tracking-tight text-gray-900 sm:text-3xl">

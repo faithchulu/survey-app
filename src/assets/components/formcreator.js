@@ -21,7 +21,7 @@ const FormCreator = () => {
 
     try {
       // Send POST request to create a new survey
-      const surveyResponse = await axios.post('http://localhost:3031/surveys', survey);
+      const surveyResponse = await axios.post('http://localhost:4000/surveys', survey);
 
       // Iterate through each question and send a POST request to create a new question for the survey
       for (const question of questions) {
@@ -30,7 +30,7 @@ const FormCreator = () => {
           surveyId: surveyResponse.data.id,
         };
 
-        await axios.post('http://localhost:3031/questions', newQuestion);
+        await axios.post('http://localhost:4000/questions', newQuestion);
       }
         alert("Survey Created sucessfully!");
        // Reset the form

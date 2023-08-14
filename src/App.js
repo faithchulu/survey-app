@@ -11,9 +11,13 @@ import Latest from "./pages/user/selectSurvey";
 import UserHome from "./pages/user/userhome";
 import SurveyDetails from "./pages/admin/surveyDetails"; // Update with your correct import path
 import SelectSurvey from "./pages/user/selectSurvey";
+import UserContext from "./UserContext";
+import { useState } from "react";
 
 function App() {
+  const [loggedInUsername, setLoggedInUsername] = useState('');
   return (
+    <UserContext.Provider value={{ loggedInUsername, setLoggedInUsername }}>
     <div>
       <BrowserRouter>
         <Routes>
@@ -34,6 +38,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </UserContext.Provider>
   );
 }
 
