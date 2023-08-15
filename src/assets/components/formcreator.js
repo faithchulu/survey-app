@@ -12,40 +12,51 @@ const FormCreator = () => {
   const { userId } = useContext(UserContext);
 
   const handleSubmit = async () => {
-
     let currentDate = new Date();
     let creation_date = currentDate.toLocaleDateString() + ' ' + currentDate.toLocaleTimeString();
-    
-   // Create survey object with userId included
-   const survey = {
-    user_id: 1, // Include userId here
-    title: surveyDescription,
-    description: surveyTitle,
-    creation_date: creation_date
-  };
+
+    const survey = {
+        user_id: userId, 
+        title: surveyDescription,
+        description: surveyTitle,
+        creation_date: creation_date
+    };
 
     try {
-      // Send POST request to create a new survey
-      const surveyResponse = await axios.post('http://localhost:4000/surveys', survey);
+        const surveyResponse = await axios.post('http://localhost:4000/surveys', survey);
 
-      // Iterate through each question and send a POST request to create a new question for the survey
-      for (const question of questions) {
-        const newQuestion = {
-          ...question,
-          surveyId: surveyResponse.data.id,
-        };
+        for (const questionObj of questions) {
+            const newQuestion = {
+                surveyId: surveyResponse.data.id,
+                question: questionObj.questionText, // Rename the question to questionText in the local state for clarity.
+                type: questionObj.type
+            };
 
-        await axios.post('http://localhost:4000/questions', newQuestion);
-      }
-        alert("Survey Created sucessfully!");
-       // Reset the form
-       setSurveyTitle("");
-       setSurveyDescription("");
-       setQuestions([]);
-     } catch (error) {
-       console.error("Error creating survey", error);
-     }
-   };
+            const questionResponse = await axios.post('http://localhost:4000/questions', newQuestion);
+
+            if (questionObj.type === "multiple-choice") {
+                for (const optionText of questionObj.options) {
+                    if (optionText) {
+                        const option = {
+                            questionId: questionResponse.data.id,
+                            optionText: optionText
+                        };
+                        await axios.post('http://localhost:4000/options', option);
+                    }
+                }
+            }
+        }
+
+        alert("Survey Created successfully!");
+        setSurveyTitle("");
+        setSurveyDescription("");
+        setQuestions([]);
+
+    } catch (error) {
+        console.error("Error creating survey", error);
+    }
+};
+
   
 
 
@@ -66,11 +77,11 @@ const FormCreator = () => {
     setQuestions(updatedQuestions);
   };
 
-  const handleQuestionChange = (index, question) => {
+  const handleQuestionChange = (index, questionText) => {
     const updatedQuestions = [...questions];
-    updatedQuestions[index].question = question;
+    updatedQuestions[index].questionText = questionText; // Change here
     setQuestions(updatedQuestions);
-  };
+};
 
   const handleOptionChange = (questionIndex, optionIndex, value) => {
     const updatedQuestions = [...questions];
